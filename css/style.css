@@ -1,0 +1,659 @@
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    font-family: "Public Sans", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--gray-color);
+    margin: 0px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    float: left;
+    padding: 20px 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #e8f5e9;
+    font-weight: bold;
+    color: #00a76f;
+}
+
+.flexes {
+    display: flex;
+    padding: 10px;
+    max-width: 50%;
+}
+
+.svg-a {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.fl-jun {
+    display: none;
+}
+
+.svg-b {
+    border-radius: 15%;
+    transform: translateY(-5px);
+    background-color: #e8f5e9;
+    font-weight: bold;
+    color: #00a76f;
+    padding: 5px;
+}
+
+.content {
+    margin-left: 18%;
+    padding: 20px;
+}
+
+.header {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    max-width: 100%;
+    border-bottom: 1px solid rgb(240, 230, 230);
+    padding-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.logout-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    gap: 4px;
+}
+
+.logout-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: -7px;
+}
+
+.add-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#home,
+#currency,
+#accounts,
+#notification,
+#payIn,
+#payInHistory,
+#payOut,
+#recharge,
+#rechargeHistory,
+#withdraw,
+#withdrawHistory,
+#settings {
+    display: none;
+}
+
+.sim {
+    display: flex;
+    align-items: center;
+}
+
+.sim p {
+    margin-left: 10px;
+}
+
+#logins {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.bal {
+    margin-left: 70px;
+}
+
+.line,
+.hand {
+    margin-left: 20px;
+}
+
+.dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropbtn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    position: relative;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropbtn i {
+    margin-left: 8px;
+}
+
+.dropbtn:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    background-color: #fff;
+    border: 2px solid #fff;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+.dropdown>li:hover .dropdown-menu {
+    display: block;
+}
+
+.rows2 input[type="text"] {
+    padding: 10px 15px;
+    width: 70%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rows2 input[type="text"]:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notext {
+    text-align: center;
+}
+
+.rekviz {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+    align-items: center;
+}
+
+.rows,
+.rows2,
+.rows3 {
+    display: inline-flex;
+    align-items: center;
+}
+
+.rows {
+    margin-left: 370px;
+}
+
+.rows2 input {
+    padding: 5px 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.custom-dropdown .dropdown-menu li a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+
+.custom-dropdown .dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+.custom-dropdown .dropbtn2 {
+    width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    color: #000;
+}
+
+.custom-dropdown .dropbtn2:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked+label {
+    background-color: green;
+    border-color: green;
+}
+
+input[type="checkbox"]:checked+label::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+input[type="number"]:hover,
+input[type="text"]:hover {
+    border-color: green;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: green;
+}
+
+#emptyMessage {
+    color: gray;
+}
+
+.add-account-btn {
+    background-color: rgb(4, 4, 4);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-account-btn:hover {
+    background-color: rgb(57, 65, 57);
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+}
+
+.cards {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 330px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.currency-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.currency-table td {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.currency-table td:first-child {
+    font-weight: bold;
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content2 {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.close2 {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content2 button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.foo {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.foo input {
+    padding-left: 2em;
+}
+
+.foo::before {
+    content: '₽';
+    position: absolute;
+    top: 14px;
+    left: 5px;
+    pointer-events: none;
+}
+
+.payment-container {
+    display: flex;
+    gap: 10px;
+}
+
+.qr-code img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.payment-details strong {
+    color: gray;
+    font-weight: normal;
+}
+
+.payment-details p {
+    font-weight: bold;
+}
+
+.cancel-btn {
+    padding: 10px 20px;
+    background-color: rgb(219, 210, 210);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: rgb(123, 121, 121);
+}
+
+.history-content {
+    padding: 20px;
+}
+
+.cards2-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cardo {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    border: 1px solid #ddd;
+}
+
+.cardo p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.status {
+    color: orange;
+    font-weight: bold;
+}
+
+.withdraw-content {
+    padding: 20px;
+}
+
+.withdraw-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.withdraw-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.withdraw-form input,
+.withdraw-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.withdraw-form input:focus,
+.withdraw-form select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(72, 239, 128, 0.5);
+}
+
+.withdraw-button {
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.withdraw-button:hover {
+    background-color: rgb(67, 70, 67);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 10px;
+        box-shadow: none;
+    }
+    .sidebar a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin: 10px;
+    }
+    .content {
+        margin-top: 20px;
+    }
+}
